@@ -5,6 +5,7 @@ function Header() {
     <header>
       <div className="ToWrap">
         <div className="main-menu"></div>
+        <div className="bottom-menu"></div>
       </div>
     </header>
   );
