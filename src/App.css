@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+body {
+  font-family: "Nunito";
+}
+
+/* ----PORTADA ---*/
+.ToWrap {
+  max-width: 1500px;
+  position: relative;
+  min-height: 500px;
+  width: 100%;
+  background: url("./bottom.png") bottom center no-repeat,
+    url("./header.png") top center no-repeat;
+}
+
+/* ----SERVICIOS ---*/
+.card-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  height: 450px;
+  transition: 150ms;
+  cursor: pointer;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0))
+    translateY(var(--translate-y, 0));
+}
+.card:hover {
+  --translate-y: -2px;
+}
+.card.flip {
+  --rotate-y: 180deg;
+}
+
+.card .front,
+.card .back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.card .front {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card .back {
+  transform: rotateY(180deg);
+}
+.card .front .title {
+  z-index: 50;
+}
+.card .front .title h2 {
+  color: #fff;
+
+  padding: 15px;
+  border-radius: 30px;
+  line-height: 1.3em;
+  font-weight: 600;
+  font-family: "Nunito";
+  letter-spacing: 0.02em;
+  font-size: 35px;
+}
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  z-index: 5;
+}
+.card .back .description {
+  padding: 20px;
+}
+
+.description h3 {
+  text-align: center;
+  color: #fff;
+  font-family: "Nunito";
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.flashcard-description ul li {
+  color: white;
+  font-family: "Nunito";
+  font-size: 25px;
+  line-height: 1.3em;
+  letter-spacing: 0.02em;
+}
+
+/* ---PREGUNTAS FRECUENTES--- */
+.card-grid-question {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.section-question {
+  background-color: #48b0a0;
+  padding: 60px;
+  margin-top: 60px;
+}
+
+.section-question h2 {
+  text-align: center;
+  color: #fff;
+  font-family: "Nunito";
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.container-question {
+  display: flex;
+}
+
+.image-card {
+  padding-top: 30px;
+  height: 90px;
+  width: 90px;
+}
+.below-card {
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  font-family: "Nunito";
+}
+
+.below-card h3 {
+  color: #273f5b;
+
+  font-size: 23px;
+  font-weight: bolder;
+}
+
+.below-card .description-card {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+/* ---FOOTER--- */
+.footer {
+  background-color: #1e3662;
+  color: #fff;
+  font-family: "Nunito";
+}
+.content1 {
+  position: relative;
+  margin: 130px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+.content1 .text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #202020;
+}
+.content1 .p {
+  font-size: 2.1875rem;
+  font-weight: 600;
+  color: #202020;
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background: #111;
+}
+.main-content {
+  display: flex;
+  padding: 50px 50px 0 50px;
+}
+.main-content .box {
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.box .content:before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+}
+.box .content:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 15%;
+  background: #f12020;
+  top: -10px;
+}
+.left .content p {
+  text-align: justify;
+}
+.left .content .social {
+  margin: 20px 0 0 0;
+}
+.left .content .social a {
+  padding: 0 2px;
+}
+.left .content .social a span {
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover {
+  background: #f12020;
+}
+.left .content .fas {
+  font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.left .content .text {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.left .content .phone {
+  margin: 15px 0;
+}
+.center .content .fas:hover {
+  background: #f12020;
+}
+.list {
+  padding-top: 20px;
+  padding-left: 0;
+}
+.list li {
+  position: relative;
+  padding-left: 1.5em; /* space to preserve indentation on wrap */
+  list-style: none;
+  padding-top: 10px;
+  font-size: 17px;
+}
+.list li:before {
+  content: ""; /* placeholder for the SVG */
+  position: absolute;
+  left: 0; /* place the SVG at the start of the padding */
+  width: 1em;
+  height: 1em;
+  background: url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='utf-8'?><svg width='18' height='18'  fill='Crimson' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z'/></svg>")
+    no-repeat;
+}
+.right form .text {
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #fff;
+}
+.right form .msg {
+  margin-top: 10px;
+}
+.right form input,
+.right form textarea {
+  width: 100%;
+  font-size: 1.0625rem;
+  border-radius: 8px;
+  padding-left: 10px;
+  border: 1px solid #f34131;
+}
+.right form input:focus,
+.right form textarea:focus {
+  outline-color: #3498db;
+}
+.right form input {
+  height: 35px;
+}
+.right form .btn {
+  margin-top: 10px;
+}
+.right form .btn button {
+  height: 40px;
+  width: 102%;
+  border: none;
+  outline: none;
+  background: #f34131;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: auto;
+  color: #fff;
+}
+.right form .btn button:hover {
+  background: #48b0a0;
+}
+.bottom center {
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+.bottom center span {
+  color: #656565;
+}
+.bottom center a {
+  color: #f12020;
+  text-decoration: none;
+}
+.bottom center a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+  footer {
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box {
+    margin: 5px 0;
+  }
+}
