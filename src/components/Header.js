@@ -19,7 +19,7 @@ function Header() {
               juego de salón y todo el equipamiento necesario para fiestas de
               karaoke. Comunicate con nosotros para darle vida a tus fiestas
             </p>
-            <img src="/nube2.png" />
+            <img className="image-bottom-menu" src="/nube2.png" />
           </div>
         </div>
         <div className="bottom-menu"></div>

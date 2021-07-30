@@ -37,15 +37,12 @@ export default function Contact() {
             <div class="social">
               <div className="phone">
                 <span className="fas fa-phone-alt"></span>
-                <span className="text">+089-765432100</span>
+                <span className="text">+54-1121836557</span>
               </div>
               <div className="email">
                 <span className="fas fa-envelope"></span>
                 <span className="text">mimijuegosinflables@gmail.com</span>
               </div>
-              {/*  <a href="https://instagram.com/coding.np">
-                <span className="fab fa-instagram"></span>
-              </a> */}
             </div>
           </div>
         </div>
@@ -100,10 +97,10 @@ export default function Contact() {
       <div className="bottom">
         <center>
           <span className="credit">
-            Created By <a href="https://www.debora-zarate.com">Deza</a> |{" "}
+            Creado por <a href="https://www.debora-zarate.com">Deza</a> |{" "}
           </span>
           <span className="far fa-copyright"></span>
-          <span> 2020 All rights reserved.</span>
+          <span> 2020 Todos los derechos reservados</span>
         </center>
       </div>
     </div>
