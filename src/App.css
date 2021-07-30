@@ -10,7 +10,7 @@ body {
 .ToWrap {
   max-width: 1500px;
   position: relative;
-  min-height: 600px;
+  min-height: 700px;
 }
 .main-menu {
   width: 100%;
@@ -29,6 +29,32 @@ body {
   bottom: 0;
   background: url("./bottom.png") bottom center no-repeat;
   background-size: cover;
+}
+.logo-center {
+  text-align: center;
+}
+.logo-main {
+  padding-top: 65px;
+  margin: auto;
+  height: 245px;
+  text-align: center;
+}
+.menu {
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+.description-menu {
+  background-color: #fff;
+  text-align: center;
+  margin: auto;
+  max-width: 1091px;
+  margin: -7px auto;
+  font-size: 20px;
+  padding: 0 30px;
+  font-family: "Nunito";
+  color: #f12020;
+  font-weight: bolder;
 }
 
 /* ----SERVICIOS ---*/
